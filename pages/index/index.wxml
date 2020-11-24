@@ -1,0 +1,54 @@
+<view class="pyg-index">
+	<!-- 搜索组件 -->
+	<SearchInput/>
+	<!-- 轮播 -->
+	<view>
+		<swiper
+		 class="swiper_image"
+		 indicator-dots="{{true}}"
+		 autoplay="{{true}}"
+		 interval="{{5000}}"
+		 duration="{{500}}"
+		 indicator-active-color="#FF8C00"
+		>
+			<block wx:for="{{swiperList}}" wx:key="goods_id">
+				<swiper-item>
+					<image mode="widthFix" src="{{item.image_src}}" />
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<!-- 导航栏 -->
+	<view class="index_cate">
+		<navigator class="nav" wx:for="{{getCateList}}" wx:key="name">
+			<image src="{{item.image_src}}" mode="widthFix" />
+		</navigator>
+	</view>
+	<!-- 商品列表 -->
+	<view class="index_floor">
+      <view class="floor_group"
+       wx:for="{{getGoodsList}}"
+         wx:for-item="item1"
+         wx:for-index="index1" 
+         wx:key="floor_title">
+          <image class="floor_title" mode="widthFix" src="{{item1.floor_title.image_src}}"></image>
+        <view class="floor_list">
+            <navigator class="nav" 
+         wx:for="{{item1.product_list}}"
+         wx:for-item="item2"
+         wx:for-index="index2" 
+         wx:key="name"
+         >
+         <!-- {{index2==0? 'widthFix' : 'scaleToFill'}}
+         取出后4张图片等于 左边图片的高度
+         -->
+         <image mode="{{index2==0? 'widthFix' : 'scaleToFill'}}" src="{{item2.image_src}}"></image>
+            </navigator>
+        </view>
+      </view>
+</view>
+
+
+		
+</view>
+

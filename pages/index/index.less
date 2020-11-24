@@ -1,0 +1,66 @@
+view {
+  // color:var(--themeColor)
+  .swiper_image {
+    image {
+      width: 100%;
+      height: 340rpx;
+      margin-top: 20rps;
+      border-radius: 10rps;
+    }
+  }
+  //
+  .index_cate {
+    display: flex;
+    justify-content: space-around;
+    // border:solid red 1px;
+    padding: 10rpx 0rpx;
+    .nav {
+      image {
+        width: 135rpx;
+      }
+    }
+    //
+    .gooder_index {
+      border: solid red 1px;
+      .gooder_title {
+        border: solid red 1px;
+      }
+    }
+  }
+  //商品列表
+  .index_floor {
+    .floor_group {
+      .floor_title {
+          width:100%;
+          height:50rpx;
+          margin:10rpx 0rpx;
+        // border: solid red 1px;
+        // padding:10rpx 0px;
+      }
+      .floor_list {
+        //清除浮动
+        overflow: hidden;
+        .nav {
+          float: left;
+          width: 33%;
+          //   改变后4张图片的大小
+          &:nth-last-child(-n + 4) {
+            // 原图w123.85 h240
+            height: 33.33vw * 380 / 232/2;
+            padding: 5rpx;
+          }
+          //
+          // &:nth-child(1),调整第一张图片样式
+          // &:nth-child(2),
+          &:nth-child(1) {
+            padding: 5rpx;
+          }
+          image {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

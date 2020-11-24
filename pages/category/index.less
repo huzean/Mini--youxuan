@@ -1,0 +1,65 @@
+page {
+  height: 100%;
+}
+.cates {
+  .cates_container {
+    // 视口高度减去头部搜索高度
+    height: ~"calc(100vh - 90rpx)";
+    // margin-top:5rpx;
+    display: flex;
+    .left_menu {
+      flex: 2;
+      .menu_item {
+        height: 100rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30rpx;
+        border-bottom: solid 1px #dad0d0;
+      }
+       .active {
+            color: red;
+            border-left: solid red 5rpx;
+          }
+   
+    }
+    .right_content {
+      background: #993535;
+      border: solid 993535 1px;
+      flex: 5;
+      .goods_title {
+        padding: 30rpx 0;
+        .delimiter {
+          color: #ccc;
+          padding: 0rpx 15rpx;
+        }
+        .title {
+          font-size: 30rpx;
+        }
+        display: flex;
+        flex: 1;
+        justify-content: center;
+      }
+      .goods_list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+
+        .nav {
+          width: 33.33%;
+
+          image {
+            padding: 5rpx;
+            border-radius: 10%;
+          }
+          .goods_name {
+            display: flex;
+            justify-content: center;
+            padding: 10rpx 0;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

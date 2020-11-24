@@ -1,0 +1,43 @@
+view .swiper_image image {
+  width: 100%;
+  height: 340rpx;
+  margin-top: 20rps;
+  border-radius: 10rps;
+}
+view .index_cate {
+  display: flex;
+  justify-content: space-around;
+  padding: 10rpx 0rpx;
+}
+view .index_cate .nav image {
+  width: 135rpx;
+}
+view .index_cate .gooder_index {
+  border: solid red 1px;
+}
+view .index_cate .gooder_index .gooder_title {
+  border: solid red 1px;
+}
+view .index_floor .floor_group .floor_title {
+  width: 100%;
+  height: 50rpx;
+  margin: 10rpx 0rpx;
+}
+view .index_floor .floor_group .floor_list {
+  overflow: hidden;
+}
+view .index_floor .floor_group .floor_list .nav {
+  float: left;
+  width: 33%;
+}
+view .index_floor .floor_group .floor_list .nav:nth-last-child(-n + 4) {
+  height: 27.29612069vw;
+  padding: 5rpx;
+}
+view .index_floor .floor_group .floor_list .nav:nth-child(1) {
+  padding: 5rpx;
+}
+view .index_floor .floor_group .floor_list .nav image {
+  width: 100%;
+  height: 100%;
+}
